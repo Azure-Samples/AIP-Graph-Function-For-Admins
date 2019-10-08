@@ -133,7 +133,7 @@ namespace GraphFunction
         // Call Microsoft Graph to get admin Group Membership
         public static async Task<Boolean> CofirmIsAdmin(string adminUPN, string AccessToken)
         {
-            //The first ID is the user object ID, and the filter's ID is the group object ID.
+            //The filter's ID is the group object ID.
             var graphUri = $"https://graph.microsoft.com/v1.0/users/{adminUPN}/memberOf?$filter=id%20eq%20'AZURE_AD_GROUP_OBJECT_ID'";
             
             bool AdminIsAMember = false;
